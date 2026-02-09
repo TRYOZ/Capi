@@ -1,0 +1,19 @@
+# Dependencies
+node_modules/
+
+# Build artifacts
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Environment
+.env
+.env.local
+
+# Generated (keep generate script, ignore output artifacts)
+# generate-pages.js is kept for regenerating translated pages
