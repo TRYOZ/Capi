@@ -49,3 +49,7 @@ Colors, typography, and spacing are defined as CSS custom properties in `css/var
 ## Deployment
 
 Static files — deploy to any web server. Currently targets `tryoz.com/work/Capi`.
+
+## License
+
+All rights reserved. Grupo Los Capilleros / A.T. CAPI-LA CURVA S.L.
