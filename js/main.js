@@ -75,11 +75,7 @@
     header.innerHTML = `
       <div class="header-inner">
         <a href="${lang}/index.html" class="site-logo">
-          <div class="logo-icon">C</div>
-          <div class="logo-text">
-            Grupo Los Capilleros
-            <span>Fresh from Almería</span>
-          </div>
+          <img src="../img/Capi_Logo.png" alt="CAPI" class="logo-img" style="height:48px;width:auto;">
         </a>
         <nav class="main-nav" id="main-nav">
           ${navLinks.map(l => `<a href="${l.page}" class="${currentPage === l.page ? 'active' : ''}">${l.label}</a>`).join('')}
@@ -134,8 +130,9 @@
       <div class="container">
         <div class="footer-grid">
           <div class="footer-brand">
-            <div class="logo-text">Grupo Los Capilleros</div>
+            <img src="../img/Capi_Logo.png" alt="CAPI" style="height:60px;width:auto;margin-bottom:var(--space-3);">
             <p>${t.footer.desc}</p>
+            <p style="font-size:var(--text-sm);color:var(--color-gray-500);margin-top:var(--space-2)">${SITE_DATA.company.legal} — CIF: ${SITE_DATA.company.cif}</p>
             <div class="footer-certifications">
               <span class="cert-badge">GlobalGAP</span>
               <span class="cert-badge">GRASP</span>
@@ -163,10 +160,11 @@
               ${ICONS.phone}
               <a href="tel:${SITE_DATA.company.phone}" style="color:inherit">${SITE_DATA.company.phone}</a>
             </div>
-            <div class="footer-contact-item">
+            ${SITE_DATA.company.contacts.map(c => `
+            <div class="footer-contact-item" style="margin-top:var(--space-2)">
               ${ICONS.mail}
-              <a href="mailto:${SITE_DATA.company.email}" style="color:inherit">${SITE_DATA.company.email}</a>
-            </div>
+              <span><strong>${c.name}</strong>${c.role ? ' — ' + c.role : ''}<br><a href="mailto:${c.email}" style="color:inherit">${c.email}</a><br><a href="tel:${c.phone.replace(/\s/g,'')}" style="color:inherit">${c.phone}</a></span>
+            </div>`).join('')}
           </div>
           <div class="footer-col">
             <h4>${t.footer.legal}</h4>
@@ -178,7 +176,7 @@
           </div>
         </div>
         <div class="footer-bottom">
-          <span>&copy; ${new Date().getFullYear()} ${SITE_DATA.company.name}. ${t.footer.rights}</span>
+          <span>&copy; ${new Date().getFullYear()} ${SITE_DATA.company.legal}. ${t.footer.rights}</span>
           <div class="lang-switcher" style="background:rgba(255,255,255,0.05)">
             <a href="../es/${window.location.pathname.split('/').pop()}" class="${lang === 'es' ? 'active' : ''}" style="color:var(--color-gray-400)">ES</a>
             <a href="../en/${window.location.pathname.split('/').pop()}" class="${lang === 'en' ? 'active' : ''}" style="color:var(--color-gray-400)">EN</a>
@@ -334,12 +332,12 @@
 
     // Placeholder images from Unsplash (produce-related)
     const categoryImages = {
-      peppers: 'https://images.unsplash.com/photo-1563565375-f3fdfdbefa83?w=600&h=800&fit=crop',
-      tomatoes: 'https://images.unsplash.com/photo-1546470427-0d4db154ceb8?w=600&h=800&fit=crop',
-      cucumbers: 'https://images.unsplash.com/photo-1604977042946-1eecc30f269e?w=600&h=800&fit=crop',
-      courgettes: 'https://images.unsplash.com/photo-1583687355032-89b902b5e3b0?w=600&h=800&fit=crop',
-      beans: 'https://images.unsplash.com/photo-1567375698348-5d9d5ae10c3a?w=600&h=800&fit=crop',
-      aubergine: 'https://images.unsplash.com/photo-1615484477778-ca3b77940c25?w=600&h=800&fit=crop',
+      peppers: '../img/California_Bell_Pepper.jpg',
+      tomatoes: '../img/vine_cluster_tomatoes.webp',
+      cucumbers: '../img/Almeria_Dutch_cucumber.jpg',
+      courgettes: '../img/green_courgette.jfif',
+      beans: '../img/Boby_bean.jpg',
+      aubergine: '../img/aubergine.jpg',
       watermelon: 'https://images.unsplash.com/photo-1563114773-84221bd62daa?w=600&h=800&fit=crop',
     };
 
@@ -374,23 +372,23 @@
 
     // Product placeholder images
     const productImages = {
-      'california-bell': 'https://images.unsplash.com/photo-1563565375-f3fdfdbefa83?w=500&h=400&fit=crop',
-      'lamuyo': 'https://images.unsplash.com/photo-1588252303782-cb80119abd6d?w=500&h=400&fit=crop',
-      'palermo': 'https://images.unsplash.com/photo-1526346698789-22fd84314424?w=500&h=400&fit=crop',
-      'italian-green': 'https://images.unsplash.com/photo-1597714026720-8f74c62310ba?w=500&h=400&fit=crop',
-      'vine-cluster': 'https://images.unsplash.com/photo-1546470427-0d4db154ceb8?w=500&h=400&fit=crop',
+      'california-bell': '../img/California_Bell_Pepper.jpg',
+      'lamuyo': '../img/Lamuyo_pepper.jpg',
+      'palermo': '../img/Palermo_Peppers.webp',
+      'italian-green': '../img/italian_green_pepper.webp',
+      'vine-cluster': '../img/vine_cluster_tomatoes.webp',
       'round-loose': 'https://images.unsplash.com/photo-1558818498-28c1e002b655?w=500&h=400&fit=crop',
       'raf': 'https://images.unsplash.com/photo-1592841200221-a6898f307baa?w=500&h=400&fit=crop',
       'cherry-snack': 'https://images.unsplash.com/photo-1546094096-0df4bcaaa337?w=500&h=400&fit=crop',
       'long-life': 'https://images.unsplash.com/photo-1582284540020-8acbe03f4924?w=500&h=400&fit=crop',
-      'dutch-type': 'https://images.unsplash.com/photo-1604977042946-1eecc30f269e?w=500&h=400&fit=crop',
-      'french-type': 'https://images.unsplash.com/photo-1449300079323-02e209d9d3a6?w=500&h=400&fit=crop',
-      'mini-spanish': 'https://images.unsplash.com/photo-1604977042946-1eecc30f269e?w=500&h=400&fit=crop',
-      'green-courgette': 'https://images.unsplash.com/photo-1583687355032-89b902b5e3b0?w=500&h=400&fit=crop',
-      'white-courgette': 'https://images.unsplash.com/photo-1583687355032-89b902b5e3b0?w=500&h=400&fit=crop',
-      'bobby-bean': 'https://images.unsplash.com/photo-1567375698348-5d9d5ae10c3a?w=500&h=400&fit=crop',
-      'flat-bean': 'https://images.unsplash.com/photo-1567375698348-5d9d5ae10c3a?w=500&h=400&fit=crop',
-      'long-aubergine': 'https://images.unsplash.com/photo-1615484477778-ca3b77940c25?w=500&h=400&fit=crop',
+      'dutch-type': '../img/Almeria_Dutch_cucumber.jpg',
+      'french-type': '../img/french_type_cucumber.webp',
+      'mini-spanish': '../img/mini_spanish_cucumber.jpg',
+      'green-courgette': '../img/green_courgette.jfif',
+      'white-courgette': '../img/white_courgette.jpg',
+      'bobby-bean': '../img/Boby_bean.jpg',
+      'flat-bean': '../img/Flat_bean.jpg',
+      'long-aubergine': '../img/aubergine.jpg',
       'striped-watermelon': 'https://images.unsplash.com/photo-1563114773-84221bd62daa?w=500&h=400&fit=crop',
       'black-watermelon': 'https://images.unsplash.com/photo-1587049352846-4a222e784d38?w=500&h=400&fit=crop',
     };

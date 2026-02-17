@@ -4,18 +4,39 @@
 
 const SITE_DATA = {
   company: {
-    name: 'Grupo Los Capilleros',
-    legal: 'A.T. CAPI-LA CURVA S.L.',
-    phone: '+34 950 34 XX XX',
-    email: 'info@grupoloscapilleros.com',
-    whatsapp: '+34600000000',
+    name: 'CAPI',
+    legal: 'A.T.CAPI S.L.',
+    cif: 'B-000000',
+    phone: '+34 950 567 058',
+    email: 'administracion@grupoloscapilleros.com',
+    whatsapp: '+34670606666',
     address: {
-      street: 'Paraje Los Capilleros, s/n',
-      city: 'Aguadulce',
+      street: 'Ctra. de Málaga nº 21',
+      city: 'La Curva, Adra',
       province: 'Almería',
-      zip: '04720',
+      zip: '04779',
       country: 'España'
     },
+    contacts: [
+      {
+        name: 'Javier Fernández Galdeano',
+        role: 'Gerente',
+        phone: '+34 670 606 666',
+        email: 'javier@grupoloscapilleros.com'
+      },
+      {
+        name: 'Lidia Reichhardt Radu',
+        role: 'Comercialización',
+        phone: '+34 658 892 618',
+        email: 'lidia@grupoloscapilleros.com'
+      },
+      {
+        name: 'Administración',
+        role: '',
+        phone: '+34 630 060 944',
+        email: 'administracion@grupoloscapilleros.com'
+      }
+    ],
     stats: {
       years: 15,
       countries: 12,
@@ -380,7 +401,7 @@ const SITE_DATA = {
         subtitle: 'Una empresa familiar almeriense con vocación de servicio al mercado europeo.',
         history: {
           title: 'Nuestra historia',
-          p1: 'Grupo Los Capilleros nace en Aguadulce, Almería, en el corazón de la mayor zona de producción hortofrutícola bajo invernadero de Europa. Con más de 15 años de experiencia, nos hemos consolidado como una comercializadora de referencia en la exportación de hortalizas frescas a mercados europeos.',
+          p1: 'Grupo Los Capilleros nace en la región de Almería y El Ejido, en el corazón de la mayor zona de producción hortofrutícola bajo invernadero de Europa. Con más de 15 años de experiencia, nos hemos consolidado como una comercializadora de referencia en la exportación de hortalizas frescas a mercados europeos.',
           p2: 'Lo que comenzó como una explotación familiar se ha convertido en una operación integrada que combina producción propia con una cuidada red de productores asociados, ofreciendo a nuestros clientes una gama completa de productos durante toda la campaña.',
         },
         model: {
@@ -390,7 +411,7 @@ const SITE_DATA = {
         },
         facilities: {
           title: 'Nuestras instalaciones',
-          p1: 'Disponemos de almacén de confección, cámaras frigoríficas y muelles de carga propios en Aguadulce. Nuestras instalaciones están diseñadas para mantener la cadena de frío desde la recolección hasta la expedición.',
+          p1: 'Disponemos de almacén de confección, cámaras frigoríficas y muelles de carga propios en la región de Almería y El Ejido. Nuestras instalaciones están diseñadas para mantener la cadena de frío desde la recolección hasta la expedición.',
         },
         almeria: {
           title: 'La ventaja de Almería',
@@ -668,7 +689,7 @@ const SITE_DATA = {
         subtitle: 'A family company from Almería with a vocation for serving the European market.',
         history: {
           title: 'Our history',
-          p1: 'Grupo Los Capilleros was born in Aguadulce, Almería, in the heart of Europe\'s largest greenhouse horticultural production area. With over 15 years of experience, we have established ourselves as a leading fresh produce marketer and exporter to European markets.',
+          p1: 'Grupo Los Capilleros was born in the region of Almería and El Ejido, in the heart of Europe\'s largest greenhouse horticultural production area. With over 15 years of experience, we have established ourselves as a leading fresh produce marketer and exporter to European markets.',
           p2: 'What started as a family farm has grown into an integrated operation combining own production with a curated network of partner growers, offering our clients a complete product range throughout the entire season.',
         },
         model: {
@@ -678,7 +699,7 @@ const SITE_DATA = {
         },
         facilities: {
           title: 'Our facilities',
-          p1: 'We operate our own packing station, cold storage rooms, and loading docks in Aguadulce. Our facilities are designed to maintain the cold chain from harvest to dispatch.',
+          p1: 'We operate our own packing station, cold storage rooms, and loading docks in the region of Almería and El Ejido. Our facilities are designed to maintain the cold chain from harvest to dispatch.',
         },
         almeria: {
           title: 'The Almería advantage',
@@ -948,7 +969,7 @@ const SITE_DATA = {
         subtitle: 'Ein Familienunternehmen aus Almería mit der Berufung, den europäischen Markt zu bedienen.',
         history: {
           title: 'Unsere Geschichte',
-          p1: 'Grupo Los Capilleros wurde in Aguadulce, Almería, im Herzen des größten Gewächshaus-Anbaugebiets Europas gegründet. Mit über 15 Jahren Erfahrung haben wir uns als führender Vermarkter und Exporteur von frischem Gemüse für europäische Märkte etabliert.',
+          p1: 'Grupo Los Capilleros wurde in der Region Almería und El Ejido, im Herzen des größten Gewächshaus-Anbaugebiets Europas gegründet. Mit über 15 Jahren Erfahrung haben wir uns als führender Vermarkter und Exporteur von frischem Gemüse für europäische Märkte etabliert.',
           p2: 'Was als Familienbetrieb begann, ist zu einem integrierten Unternehmen gewachsen, das Eigenproduktion mit einem ausgewählten Netzwerk von Partnerzeugern kombiniert und unseren Kunden ein komplettes Sortiment während der gesamten Saison bietet.',
         },
         model: {
@@ -958,7 +979,7 @@ const SITE_DATA = {
         },
         facilities: {
           title: 'Unsere Einrichtungen',
-          p1: 'Wir betreiben eine eigene Packstation, Kühlräume und Verladerampen in Aguadulce. Unsere Einrichtungen sind darauf ausgelegt, die Kühlkette von der Ernte bis zum Versand aufrechtzuerhalten.',
+          p1: 'Wir betreiben eine eigene Packstation, Kühlräume und Verladerampen in der Region Almería und El Ejido. Unsere Einrichtungen sind darauf ausgelegt, die Kühlkette von der Ernte bis zum Versand aufrechtzuerhalten.',
         },
         almeria: {
           title: 'Der Almería-Vorteil',
